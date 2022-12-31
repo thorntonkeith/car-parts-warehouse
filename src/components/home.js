@@ -1,5 +1,7 @@
+//Imports
 import React, { Component } from "react";
 
+//Home Component
 export class Home extends Component {
   render() {
     return (
