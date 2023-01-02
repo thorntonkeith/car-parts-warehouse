@@ -11,7 +11,7 @@ export class Browse extends React.Component {
     componentDidMount() {
         axios.get('http://localhost:4000/api/car_parts')
             .then((response) => {
-                this.setState({ car_parts: response.data })
+                this.setState({ carParts: response.data })
             })
             .catch((error) => {
                 console.log(error);
@@ -19,14 +19,14 @@ export class Browse extends React.Component {
     }
 
     state = {
-        car_parts: []
+        carParts: []
     }
 
     render() {
         return (
             <div>
                 <h3>Browse component!</h3>
-                <CarParts carPart={this.state.carPart} Reload={this.componentDidMount}></CarParts>
+                <CarParts carParts={this.state.carParts} Reload={this.componentDidMount}></CarParts>
             </div>
         );
     }

@@ -19,18 +19,18 @@ export class Add extends React.Component {
 
     onSubmit(event){
        event.preventDefault();
-        console.log(`Button clicked 
+        console.log(`Clicked button 
         ${this.state.name},
         ${this.state.image},
         ${this.state.make}`);
 
-        const part ={
+        const carParts ={
             name:this.state.name,
             image:this.state.image,
             make:this.state.make
         }
 
-        axios.post('http://localhost:4000/api/',part)
+        axios.post('http://localhost:4000/api/car_parts',carParts)
         .then()
         .catch();
 
