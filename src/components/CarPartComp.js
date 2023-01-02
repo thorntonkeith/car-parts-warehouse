@@ -5,7 +5,7 @@ import Button  from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-export class CarPartCmpts extends React.Component {
+export class CarPartComp extends React.Component {
     constructor(){
         super();
         this.DeletePart = this.DeletePart.bind(this);
@@ -13,7 +13,7 @@ export class CarPartCmpts extends React.Component {
     DeletePart(event){
         event.preventDefault();
 
-        axios.delete('http://localhost:4000/api/carPart/'+this.props.carPart.id)
+        axios.delete('http://localhost:4000/api/carPart/'+this.props.carPart._id)
         .then((response)=>{this.props.Reload();})
         .catch();
     }
@@ -31,7 +31,7 @@ export class CarPartCmpts extends React.Component {
                             </footer>
                         </blockquote>
                     </Card.Body>
-                    <Link to={'/modify/' + this.props.carPart.id} className="btn btn-primary">Edit</Link>
+                    <Link to={'/modify/' + this.props.carPart._id} className="btn btn-primary">Edit</Link>
                     <Button variant="danger" onClick={this.DeletePart}>Delete</Button>
                 </Card>
             </div>
