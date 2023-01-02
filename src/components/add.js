@@ -60,7 +60,7 @@ export class Add extends React.Component {
     render() {
         return (
             <div>
-                <h3>Add Component!</h3>
+                <h3>Add Part</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Add Part Name: </label>

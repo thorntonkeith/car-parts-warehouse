@@ -8,6 +8,8 @@ import Container from 'react-bootstrap/Container';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import { Add } from "./components/add";
 import { Browse } from "./components/browse";
+import { Modify } from "./components/modify";
+
 
 //App Component
 class App extends Component {
@@ -25,6 +27,7 @@ class App extends Component {
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/add">Add</Nav.Link>
                 <Nav.Link href="/browse">Browse</Nav.Link>
+                <Nav.Link href="/modify">Modify</Nav.Link>
               </Nav>
             </Container>
           </Navbar>
@@ -34,6 +37,7 @@ class App extends Component {
             <Route path="/" element={<Home></Home>} />
             <Route path="/add" element={<Add></Add>} />
             <Route path="/browse" element={<Browse></Browse>} />
+            <Route path="/modify/:id" element={<Modify></Modify>} />
           </Routes>
         </div>
       </Router>
