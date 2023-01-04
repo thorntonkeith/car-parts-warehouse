@@ -17,11 +17,12 @@ class App extends Component {
     return (
       //Routing
       <Router>
-        <div className="Main">
+        <div className="container">
           {/*Navbar*/}
+          <div className="navigation rounded-5">
           <Navbar bg="danger" variant="dark">
             {/*Navbar Links*/}
-            <Container>
+            <Container className="container">
             <Navbar.Brand href="/">Car Parts Warehouse</Navbar.Brand>
               <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
@@ -31,6 +32,7 @@ class App extends Component {
               </Nav>
             </Container>
           </Navbar>
+          </div>
           <br />
           {/*Paths for component routes*/}
           <Routes>

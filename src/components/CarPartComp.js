@@ -22,17 +22,17 @@ export class CarPartComp extends React.Component {
             <div>
 
                 <Card>
-                    <Card.Header>{this.props.carParts.name}</Card.Header>
+                    <Card.Header >{this.props.carParts.name}</Card.Header>
                     <Card.Body>
-                        <blockquote className="blockquote mb-0">
-                            <img src={this.props.carParts.image}></img>
+                        <blockquote  className="blockquote mb-0">
+                            <img src={this.props.carParts.image} class="rounded mx-auto d-block" width="300" height="200" alt="part img"></img>
                             <footer >
                                 {this.props.carParts.make}
                             </footer>
                         </blockquote>
                     </Card.Body>
                     <Link to={'/modify/' + this.props.carParts._id} className="btn btn-primary">Edit</Link>
-                    <Button variant="danger" onClick={this.DeletePart}>Delete</Button>
+                    <Button variant="danger" onClick={this.DeletePart}>Delete Part</Button>
                 </Card>
             </div>
         );
