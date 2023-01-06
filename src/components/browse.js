@@ -29,7 +29,7 @@ export class Browse extends React.Component {
   render() {
     return (
       <div>
-        <h3 style={{textAlignVertical: "center",textAlign: "center"}}>Browse component!</h3>
+        <h3 style={{textAlignVertical: "center",textAlign: "center"}}>Browse Parts</h3>
         {/* Displaying data from database */}
         <CarParts
           carParts={this.state.carParts}

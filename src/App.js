@@ -33,6 +33,10 @@ class App extends Component {
               </Nav>
             </Container>
           </Navbar>
+
+          
+
+
           </div>
           <br />
           {/*Paths for component routes*/}
