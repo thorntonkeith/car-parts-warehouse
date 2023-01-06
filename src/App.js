@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-rou
 import { Add } from "./components/add";
 import { Browse } from "./components/browse";
 import { Modify } from "./components/modify";
+import spark_plug_s from "./assets/spark_plug_s.png"
 
 
 //App Component
@@ -23,7 +24,7 @@ class App extends Component {
           <Navbar className="rounded" bg="danger" variant="dark">
             {/*Navbar Links*/}
             <Container className="container ">
-            <Navbar.Brand className="mr-2" href="/">Car Parts Warehouse</Navbar.Brand>
+            <Navbar.Brand href="/"><img src={spark_plug_s} />Car Parts Warehouse</Navbar.Brand>
               <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/add">Add</Nav.Link>

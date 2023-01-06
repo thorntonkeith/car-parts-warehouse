@@ -26,7 +26,7 @@ export class CarPartComp extends React.Component {
     return (
       <div>
         {/* Bootstrap card displaying each individual car part */}
-        <Card className="container">
+        <Card className="container" style={{textAlignVertical: "center",textAlign: "center"}}>
           <Card.Header>{this.props.carParts.name}</Card.Header>
           <Card.Body>
             <blockquote className="blockquote mb-0">
@@ -49,12 +49,7 @@ export class CarPartComp extends React.Component {
           </Link>
           {/* Delete button */}
           <Button
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-              width: "100px",
-              height: "50px",
-            }}
+            
             variant="danger "
             onClick={this.DeletePart}
           >
