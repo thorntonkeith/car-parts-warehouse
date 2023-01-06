@@ -17,13 +17,13 @@ class App extends Component {
     return (
       //Routing
       <Router>
-        <div className="container">
+        <div className="container ">
           {/*Navbar*/}
           <div className="navigation rounded-5">
-          <Navbar bg="danger" variant="dark">
+          <Navbar className="rounded" bg="danger" variant="dark">
             {/*Navbar Links*/}
-            <Container className="container">
-            <Navbar.Brand href="/">Car Parts Warehouse</Navbar.Brand>
+            <Container className="container ">
+            <Navbar.Brand className="mr-2" href="/">Car Parts Warehouse</Navbar.Brand>
               <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/add">Add</Nav.Link>
