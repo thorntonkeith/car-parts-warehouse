@@ -21,9 +21,9 @@ class App extends Component {
         <div className="container ">
           {/*Navbar*/}
           <div className="navigation rounded-5">
-          <Navbar className="rounded" bg="danger" variant="dark">
+          <Navbar className="text-uppercase" bg="secondary" variant="dark">
             {/*Navbar Links*/}
-            <Container className="container ">
+            <Container className="container">
             <Navbar.Brand href="/"><img src={spark_plug_s} />Car Parts Warehouse</Navbar.Brand>
               <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>

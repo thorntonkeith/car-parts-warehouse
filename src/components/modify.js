@@ -10,6 +10,7 @@ export function Modify() {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const [make, setMake] = useState("");
+  const [partNo, setPartNo] = useState("");
 
   useEffect(() => {
     //Using axios to make get request for data to be edited
@@ -19,6 +20,7 @@ export function Modify() {
         setName(response.data.name);
         setImage(response.data.image);
         setMake(response.data.make);
+        setPartNo(response.data.partNo);
       })
       .catch();
   }, []);
@@ -30,6 +32,7 @@ export function Modify() {
       name: name,
       image: image,
       make: make,
+      partNo: partNo,
     };
 
     //Using axios to make put request for editing data in database
@@ -74,6 +77,17 @@ export function Modify() {
             value={make}
             onChange={(event) => {
               setMake(event.target.value);
+            }}
+          />
+        </div>
+        <div className="form-group">
+          <label>Edit Part Number: </label>
+          <input
+            type="text"
+            className="form-control"
+            value={partNo}
+            onChange={(event) => {
+              setPartNo(event.target.value);
             }}
           />
         </div>

@@ -10,11 +10,13 @@ export class Add extends React.Component {
     this.onChangePartName = this.onChangePartName.bind(this);
     this.onChangePartImage = this.onChangePartImage.bind(this);
     this.onChangePartMake = this.onChangePartMake.bind(this);
+    this.onChangePartPartNo = this.onChangePartPartNo.bind(this);
 
     this.state = {
       name: "",
       image: "",
       make: "",
+      partNo: "",
     };
   }
 
@@ -23,12 +25,14 @@ export class Add extends React.Component {
     console.log(`Clicked button 
         ${this.state.name},
         ${this.state.image},
-        ${this.state.make}`);
+        ${this.state.make},
+        ${this.state.partNo}`);
 
     const carParts = {
       name: this.state.name,
       image: this.state.image,
       make: this.state.make,
+      partNo: this.state.partNo,
     };
 
     axios.post("http://localhost:4000/api/car_parts", carParts).then().catch();
@@ -37,6 +41,7 @@ export class Add extends React.Component {
       name: "",
       image: "",
       make: "",
+      partNo: "",
     });
   }
 
@@ -54,6 +59,11 @@ export class Add extends React.Component {
   onChangePartMake(event) {
     this.setState({
       make: event.target.value,
+    });
+  }
+  onChangePartPartNo(event) {
+    this.setState({
+      partNo: event.target.value,
     });
   }
 
@@ -90,6 +100,16 @@ export class Add extends React.Component {
               className="form-control"
               value={this.state.make}
               onChange={this.onChangePartMake}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Add Part Number: </label>
+            <input
+              type="text"
+              className="form-control"
+              value={this.state.partNo}
+              onChange={this.onChangePartPartNo}
             />
           </div>
 

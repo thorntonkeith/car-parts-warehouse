@@ -38,6 +38,7 @@ export class CarPartComp extends React.Component {
                 alt="part img"
               ></img>
               <footer>{this.props.carParts.make}</footer>
+              <footer>{this.props.carParts.partNo}</footer>
             </blockquote>
           </Card.Body>
           {/* React Router Dom link used to edit car part */}

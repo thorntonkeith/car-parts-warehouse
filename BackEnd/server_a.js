@@ -37,6 +37,7 @@ const carPartSchema = new mongoose.Schema({
   name: String,
   image: String,
   make: String,
+  partNo: Number,
 });
 
 //Using the schema to  create new "carPart" database model
@@ -51,6 +52,7 @@ app.post("/api/car_parts", (req, res) => {
     name: req.body.name,
     image: req.body.image,
     make: req.body.make,
+    partNo: req.body.partNo
   });
 
   res.send("Part Added");
